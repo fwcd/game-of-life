@@ -1,12 +1,12 @@
-package com.thedroide.gameoflife.figures;
+package com.fwcd.gameoflife.figures;
 
 import java.util.Arrays;
 import java.util.List;
 
-import com.thedroide.gameoflife.utils.Position;
+import com.fwcd.gameoflife.utils.Position;
 
 public class Glider implements Figure {
-	private static List<Position> pixels = Arrays.asList(
+	private static final List<Position> PIXELS = Arrays.asList(
 			new Position(0, 0),
 			new Position(0, -1),
 			new Position(0, -2),
@@ -16,6 +16,6 @@ public class Glider implements Figure {
 
 	@Override
 	public List<Position> getPixels() {
-		return pixels;
+		return PIXELS;
 	}
 }

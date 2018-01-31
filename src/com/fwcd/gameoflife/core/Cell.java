@@ -1,4 +1,4 @@
-package com.thedroide.gameoflife.core;
+package com.fwcd.gameoflife.core;
 
 public class Cell {
 	private CellState state = CellState.DEAD;
@@ -58,16 +58,7 @@ public class Cell {
 	}
 	
 	public int getPixel() {
-		switch (state) {
-		
-		case ALIVE:
-			return 0xffff00;
-		case DEAD:
-			return 0x000000;
-		default:
-			throw new RuntimeException("Invalid cell state.");
-		
-		}
+		return state.getColor();
 	}
 
 	public int getX() {

@@ -1,6 +1,6 @@
-package com.thedroide.gameoflife;
+package com.fwcd.gameoflife;
 
-import com.thedroide.gameoflife.core.GameWindow;
+import com.fwcd.gameoflife.core.GameWindow;
 
 public class GameOfLife {
 	public static void main(String[] args) {

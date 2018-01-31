@@ -1,4 +1,4 @@
-package com.thedroide.gameoflife.figures;
+package com.fwcd.gameoflife.figures;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -7,17 +7,16 @@ import java.util.List;
 
 import javax.imageio.ImageIO;
 
-import com.thedroide.gameoflife.utils.Position;
+import com.fwcd.gameoflife.utils.Position;
 
 public class PufferTrain implements Figure {
-	private static List<Position> pixels = new ArrayList<>();
+	private static final List<Position> PIXELS = new ArrayList<>();
 	
 	static {
-		if (pixels.isEmpty()) {
+		if (PIXELS.isEmpty()) {
 			try {
 				BufferedImage image = ImageIO.read(
-						PufferTrain
-						.class
+						PufferTrain.class
 						.getResourceAsStream("/resources/pufferTrain.png"));
 				
 				for (int x=0; x<image.getWidth(); x++) {
@@ -27,18 +26,18 @@ public class PufferTrain implements Figure {
 								.getPixel(x, y, new int[8]);
 						
 						if (pixel[0] != 0x000000) {
-							pixels.add(new Position(x, y));
+							PIXELS.add(new Position(x, y));
 						}
 					}
 				}
 			} catch (IOException e) {
-				e.printStackTrace();
+				throw new RuntimeException(e);
 			}
 		}
 	}
 	
 	@Override
 	public List<Position> getPixels() {
-		return pixels;
+		return PIXELS;
 	}
 }

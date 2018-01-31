@@ -1,18 +1,17 @@
-package com.thedroide.gameoflife.core;
+package com.fwcd.gameoflife.core;
 
 import java.awt.Graphics;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseMotionAdapter;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
 
 import javax.swing.JFrame;
 
-import com.thedroide.gameoflife.figures.Figure;
-import com.thedroide.gameoflife.figures.PufferTrain;
-import com.thedroide.gameoflife.utils.Position;
+import com.fwcd.gameoflife.figures.Figure;
+import com.fwcd.gameoflife.figures.PufferTrain;
+import com.fwcd.gameoflife.utils.Position;
 
 public class GameWindow {
 	private JFrame view;
@@ -71,7 +70,8 @@ public class GameWindow {
 		view.setSize(width, height);
 		view.setResizable(false);
 		view.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		view.addMouseListener(new MouseAdapter() {
+		
+		MouseAdapter mouseAdapter = new MouseAdapter() {
 			
 			@Override
 			public void mousePressed(MouseEvent e) {
@@ -85,25 +85,21 @@ public class GameWindow {
 					}
 				}
 			}
+
+			@Override
+			public void mouseDragged(MouseEvent e) {
+				// Spawns single cells
+				game.cellAt(e.getX(), e.getY()).setAndKeepAlive();
+			}
 			
 			@Override
 			public void mouseReleased(MouseEvent e) {
 				game.setAllVulnerable();
 			}
 			
-		});
-		view.addMouseMotionListener(new MouseMotionAdapter() {
-
-			@Override
-			public void mouseDragged(MouseEvent e) {
-				if (e.getButton() == MouseEvent.BUTTON1) {
-					// Spawns single cells
-					game.cellAt(e.getX(), e.getY()).setAndKeepAlive();
-				}
-			}
-			
-		});
-		
+		};
+		view.addMouseListener(mouseAdapter);
+		view.addMouseMotionListener(mouseAdapter);
 		view.setVisible(true);
 	}
 	

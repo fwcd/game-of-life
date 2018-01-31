@@ -1,4 +1,4 @@
-package com.thedroide.gameoflife.utils;
+package com.fwcd.gameoflife.utils;
 
 public class Position {
 	private final int x;
