@@ -2,4 +2,8 @@
 .classpath
 .idea/
 .project
+.vscode
+.gradle
+.DS_Store
+build
 bin/

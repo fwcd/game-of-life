@@ -1,9 +1,9 @@
-package com.fwcd.gameoflife.figures;
+package fwcd.gameoflife.figures;
 
 import java.util.Arrays;
 import java.util.List;
 
-import com.fwcd.gameoflife.utils.Position;
+import fwcd.gameoflife.utils.Position;
 
 public class Glider implements Figure {
 	private static final List<Position> PIXELS = Arrays.asList(

@@ -1,4 +1,4 @@
-package com.fwcd.gameoflife.core;
+package fwcd.gameoflife.core;
 
 public class Cell {
 	private CellState state = CellState.DEAD;

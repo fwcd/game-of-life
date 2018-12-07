@@ -1,4 +1,4 @@
-package com.fwcd.gameoflife.core;
+package fwcd.gameoflife.core;
 
 public enum CellState {
 	ALIVE(0xFFFF00), DEAD(0x000000);

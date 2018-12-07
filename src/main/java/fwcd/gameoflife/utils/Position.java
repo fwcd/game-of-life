@@ -1,4 +1,4 @@
-package com.fwcd.gameoflife.utils;
+package fwcd.gameoflife.utils;
 
 public class Position {
 	private final int x;

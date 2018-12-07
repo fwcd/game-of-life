@@ -1,4 +1,4 @@
-package com.fwcd.gameoflife.figures;
+package fwcd.gameoflife.figures;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.util.List;
 
 import javax.imageio.ImageIO;
 
-import com.fwcd.gameoflife.utils.Position;
+import fwcd.gameoflife.utils.Position;
 
 public class PufferTrain implements Figure {
 	private static final List<Position> PIXELS = new ArrayList<>();
@@ -17,7 +17,7 @@ public class PufferTrain implements Figure {
 			try {
 				BufferedImage image = ImageIO.read(
 						PufferTrain.class
-						.getResourceAsStream("/resources/pufferTrain.png"));
+						.getResourceAsStream("/pufferTrain.png"));
 				
 				for (int x=0; x<image.getWidth(); x++) {
 					for (int y=0; y<image.getHeight(); y++) {

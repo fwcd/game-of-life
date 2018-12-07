@@ -1,4 +1,4 @@
-package com.fwcd.gameoflife.core;
+package fwcd.gameoflife.core;
 
 import java.util.ArrayList;
 import java.util.List;

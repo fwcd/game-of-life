@@ -1,4 +1,4 @@
-package com.fwcd.gameoflife.core;
+package fwcd.gameoflife.core;
 
 import java.awt.Graphics;
 import java.awt.event.MouseAdapter;
@@ -9,9 +9,9 @@ import java.awt.image.DataBufferInt;
 
 import javax.swing.JFrame;
 
-import com.fwcd.gameoflife.figures.Figure;
-import com.fwcd.gameoflife.figures.PufferTrain;
-import com.fwcd.gameoflife.utils.Position;
+import fwcd.gameoflife.figures.Figure;
+import fwcd.gameoflife.figures.PufferTrain;
+import fwcd.gameoflife.utils.Position;
 
 public class GameWindow {
 	private JFrame view;

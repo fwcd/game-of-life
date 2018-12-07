@@ -1,4 +1,4 @@
-package com.fwcd.gameoflife.core;
+package fwcd.gameoflife.core;
 
 public class NeighborCells {
 	private final Cell[] cells;

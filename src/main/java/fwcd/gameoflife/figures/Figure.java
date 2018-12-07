@@ -1,8 +1,8 @@
-package com.fwcd.gameoflife.figures;
+package fwcd.gameoflife.figures;
 
 import java.util.List;
 
-import com.fwcd.gameoflife.utils.Position;
+import fwcd.gameoflife.utils.Position;
 
 public interface Figure {
 	List<Position> getPixels();
